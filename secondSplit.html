@@ -35,12 +35,12 @@
   var client = factory.client();
 
   client.on(client.Event.SDK_READY, function() {
-  var treatment = client.getTreatment("doublecolumnlayout");
-  let main = document.querySelector('main');
+  var treatment = client.getTreatment("change_font_type");
+  
   if (treatment == "on") {
-     main.classList.add('double-column');
+    document.fontFamily="Helvetica";
   } else if (treatment == "off") {
-     main.classList.remove('double-column');
+    document.fontFamily="Arial";
   } else {
       // insert your control treatment code here
   }
